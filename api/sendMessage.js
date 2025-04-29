@@ -28,7 +28,7 @@ module.exports = async (req, res) => {
     );
     res.status(200).json({ success: true });
   } catch (error) {
-    console.error(error);
+    console.log('Error details:', error.response ? error.response.data : error.message);
     res.status(500).json({ error: 'فشل إرسال الرسالة' });
   }
 };
