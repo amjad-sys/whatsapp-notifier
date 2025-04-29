@@ -1,4 +1,3 @@
-// api/sendMessage.js
 const axios = require('axios');
 
 module.exports = async (req, res) => {
@@ -14,12 +13,15 @@ module.exports = async (req, res) => {
   try {
     await axios.post(
       `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`,
-      new URLSearchParams({
+      {
         Body: messageBody,
         From: from,
         To: to,
-      }),
+      },
       {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
         auth: {
           username: accountSid,
           password: authToken,
