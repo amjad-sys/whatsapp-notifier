@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   const accountSid = process.env.TWILIO_ACCOUNT_SID;
   const authToken = process.env.TWILIO_AUTH_TOKEN;
   const from = 'whatsapp:+14155238886';
-  const to = 'whatsapp:+966500000000'; // استبدل برقم مجموعتك
+  const to = 'whatsapp:+970592945692'; // استبدل برقم مجموعتك
 
   const messageBody = `تمت إضافة نتيجة جديدة:\nالطالب: ${studentName}\nالدرجة: ${score}/${total}\nالمستوى: ${level}`;
 
